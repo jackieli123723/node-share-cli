@@ -1,0 +1,18 @@
+{
+  "name": "share-cli",
+  "version": "1.0.0",
+  "description": "cli",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodeppt serve share.md",
+    "build": "nodeppt build share.md"
+  },
+  "author": "jackieli",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "nodeppt": "^2.1.8"
+  }
+}
