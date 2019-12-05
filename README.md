@@ -8,3 +8,11 @@ yarn dev
 yarn build
 
 ```
+
+
+
+## 天气预报cli 工具  
+
+```
+npm i wci-cli-tool
+```

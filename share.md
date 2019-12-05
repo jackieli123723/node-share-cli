@@ -1,18 +1,34 @@
-title: Node命令行界面(CLI)工具开发
+title: Node命令行(CLI)工具开发
 speaker: jackieli
 plugins:
     - echarts
 url: https://github.com/ksky521/nodeppt
 js:
     - background.js
-<slide class="bg-apple aligncenter" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575462239940&di=af591ea18027cc039753514993cc50bd&imgtype=0&src=http%3A%2F%2Fwww.51pptmoban.com%2Fd%2Ffile%2F2016%2F09%2F16%2Fa55fcb02fea35f01c9d397d3d2060f20.jpg .dark">
+<slide class="bg-apple aligncenter" image="http://static.lilidong.cn/bg.jpg .dark">
 
-# Node命令行界面(CLI)工具开发 {.text-subtitle.animated.fadeIn}
+:::{.aligncenter}
 
+# Node命令行(CLI)工具开发 {.text-subtitle.animated.fadeIn}
+
+
+:::
+
+
+:::footer
+&emsp; {.alignleft}
+
+[:fa-github: jackieli](https://github.com/jackieli123723){.alignright}
+
+:::
+
+:::header
+&emsp; {.alignright}
+:::
 
 <slide class="bg-apple aligncenter" >
 
-#### Node命令行界面(CLI)工具开发 {.text-subtitle.animated.fadeInDown.delay-100}
+#### Node命令行(CLI)工具开发 {.text-subtitle.animated.fadeInDown.delay-100}
 - CLI是什么？{.text-subtitle.animated.fadeInDown.delay-300}
 - CLI工具的应用 {.text-subtitle.animated.fadeInDown.delay-400}
 - CLI开发的模块介绍 {.text-subtitle.animated.fadeInDown.delay-500}
@@ -21,11 +37,27 @@ js:
 - 总结和Q&A  {.text-subtitle.animated.fadeInDown.delay-800}
 
 
-<slide class="bg-apple aligncenter" >
 
-#### CLI是什么？{.text-subtitle.animated.fadeInDown.delay-300}
+<slide class=" bg-apple fullscreen"> {.bg-apple}
 
-命令行界面（英语：command-line interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（CUI）。简而言之，CLI代表命令行界面。该程序允许用户键入指示计算机执行特定任务的文本命令。{.text-subtitle.animated.fadeInUp.delay-300}
+:::card
+
+![](http://static.lilidong.cn/bgcli.png)
+
+---
+
+## CLI是什么？
+
+
+<br/>
+命令行界面（英语：Command-Line Interface，缩写：CLI）是在图形用户界面得到普及之前使用最为广泛的用户界面，它通常不支持鼠标，用户通过键盘输入指令，计算机接收到指令后，予以执行。也有人称之为字符用户界面（character user interface, CUI）。
+
+
+通常认为，命令行界面（CLI）没有图形用户界面（GUI）那么方便用户操作。因为，命令行界面的软件通常需要用户记忆操作的命令，但是，由于其本身的特点，命令行界面要较图形用户界面节约计算机系统的资源。在熟记命令的前提下，使用命令行界面往往要较使用图形用户界面的操作速度要快。所以，在现在的图形用户界面的操作系统中，通常都保留着可选的命令行界面。 {.bg-apple.animated.fadeInLeft.delay-300}
+
+
+
+:::
 
 
 <slide class="bg-apple aligncenter" >
@@ -68,7 +100,7 @@ js:
 
 #### 抓包分析{.text-subtitle.animated.fadeInDown.delay-300}
 
- !![](images/t0.png .aligncenter)
+ !![](images/t0.png .aligncenter){.animated.fadeInUp}
 
 
 <slide class="bg-apple aligncenter" >
@@ -76,7 +108,7 @@ js:
 #### 抓包分析{.text-subtitle.animated.fadeInDown.delay-300}
 
 这是正常渲染后的数据,对比`上图`可以看出来这里的数据是异步注入的,单通过抓取dom结构没有数据？
- !![](images/t1.png .aligncenter)
+ !![](images/t1.png .aligncenter){.animated.fadeInUp}
 
 
 
@@ -86,7 +118,7 @@ js:
 
  怎么才能拿到数据？ （断点分析 或无头浏览器Puppeteer）
 
- !![](images/break.png .aligncenter)
+ !![](images/break.png .aligncenter){.animated.fadeInUp}
 
 
 
@@ -107,7 +139,7 @@ js:
 #### 反爬虫数据策略的处理{.text-subtitle.animated.fadeInDown.delay-300}
 
 <br />
- 还可能出现这样的页面？是不是!![](https://qq.yh31.com/tp/zjbq/201210101411224961.gif)的感觉 
+ 还可能出现这样的页面？是不是!![](images/201210101411224961.gif)的感觉 
 
  !![](images/f2.png .aligncenter)
 
@@ -152,7 +184,7 @@ js:
 
 #### 进入正题{.text-subtitle.animated.fadeInDown.delay-300}
 
-   说了半天好像也没有说到如何开发一个CLI 
+   说了半天好像也没有说到如何开发一个CLI {.bounce}
 
 
 <slide class="bg-apple aligncenter" >
@@ -217,6 +249,38 @@ weather -c 成都 -j -d 7 --hourly --date 12-06
 
 
 
+<slide class="bg-apple aligncenter" >
+
+#### wci-cli-tool 源码
+
+
+<slide class="bg-white " >
+
+<iframe 
+        frameborder="0" 
+        width="100%" 
+        height="100%" 
+        style="width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;"
+        src="https://source.runkitcdn.com/npm/wci-cli-tool/lib/weather.js?t=1575533053272&engine=10.x.x">
+</iframe>
+
+
+
+<slide class="bg-apple aligncenter" >
+
+#### 数据来源处理DA聚合 源码（Koa2）
+
+
+
+<slide class="bg-white " >
+
+<iframe 
+        frameborder="0" 
+        width="100%" 
+        height="100%" 
+        style="width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;"
+        src="https://source.runkitcdn.com/npm/wci-cli-tool/server.js?t=1575533053272&engine=10.x.x">
+</iframe>
 
 <slide class="bg-apple aligncenter" >
 
@@ -228,9 +292,15 @@ weather -c 成都 -j -d 7 --hourly --date 12-06
 
 #### Q&A {.animated.tada}
 
-安装使用
+安装使用 
 
-`npm i wci-cli-tool `
+`npm i wci-cli-tool ` !![](https://img.shields.io/npm/v/wci-cli-tool.svg?style=flat) 
+ 
+
+
+   !![](https://img.shields.io/npm/dm/wci-cli-tool.svg)
+
+   <br /> <br /> <br />
 
 [:fa-cloud-download: Github](https://www.npmjs.com/package/wci-cli-tool){.button.animated.delay-1s.fadeInUp}
 
